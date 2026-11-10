@@ -1,0 +1,23 @@
+[mod]
+id = "auto_eat_baritone"
+version = "0.1.0"
+priority = 100
+
+[compatibility]
+horizon_revision = "f319701e8c9ab657ff562250b3ba07b2d654e3bc"
+
+[[module]]
+id = "runtime"
+file = "crates/horizon-client/src/game.rs"
+name = "auto_eat_baritone"
+source = "runtime.rs"
+
+[[injection]]
+id = "tick"
+kind = "HEAD"
+hook = "tick"
+hook_version = 1
+helper = "tick.rs"
+bindings = [
+  { name = "game", ty = "&mut crate::game::Game<'_>", value = "&mut *self" },
+]

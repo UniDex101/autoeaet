@@ -1,0 +1,17 @@
+schema = 1
+id = "auto_eat_baritone"
+name = "Baritone Auto Eat"
+version = "0.1.0"
+description = "TODO: Make desc"
+authors = ["Unidex101"]
+license = "MIT"
+repository = ""
+
+[environment]
+client = "required"
+server = "unsupported"
+
+[compatibility]
+game = ["26.3"]
+horizon = ">=0.2.0-nightly.2026.10.28"
+api = 1
